@@ -140,6 +140,7 @@
       "services": "Service Businesses"
     },
     "exploreCta": "Explore the solution",
+    "storyLabel": "Success story",
     "retail": {
       "label": "Retail",
       "tagline": "Inventory, suppliers and sales — one clear picture.",
@@ -150,12 +151,6 @@
         { "title": "Supplier invoice analysis", "body": "Catch pricing anomalies and overpriced suppliers before they hit your costs." },
         { "title": "Real-time alerts that save you money", "body": "Unusual price? Stale inventory? Get notified before it adds up." },
         { "title": "Loss-making product detection", "body": "Find which items are taking up space and losing you money." }
-      ],
-      "stats": [
-        { "value": "Hours", "label": "saved weekly on manual reporting" },
-        { "value": "Instant", "label": "detection of supplier anomalies and loss-makers" },
-        { "value": "24/7", "label": "business monitoring without staying glued to a screen" },
-        { "value": "0", "label": "new tools to learn — just WhatsApp" }
       ]
     },
     "restaurants": {
@@ -168,12 +163,6 @@
         { "title": "Recipe book management", "body": "Track the actual cost of every dish based on its real ingredients." },
         { "title": "Dynamic food cost based on live supplier prices", "body": "Supplier price changed? Dish cost updates automatically." },
         { "title": "Real-time alerts on what actually matters", "body": "An unusual drop in a shift, a dish over budget — you'll always know." }
-      ],
-      "stats": [
-        { "value": "↓12%", "label": "average food cost reduction after recipe tracking" },
-        { "value": "Dynamic", "label": "dish cost updates based on live market prices" },
-        { "value": "0", "label": "cost surprises — full visibility into every dish" },
-        { "value": "Real-time", "label": "alerts on what's hitting your bottom line" }
       ]
     },
     "hospitality": {
@@ -186,12 +175,6 @@
         { "title": "Room service & F&B margins", "body": "Track what guests order, when, and the real margin on every item." },
         { "title": "Guest satisfaction signals", "body": "Catch a dip in reviews or service scores before it spreads across locations." },
         { "title": "Shift & staffing visibility", "body": "Match front-desk and housekeeping cover to predicted arrivals and check-outs." }
-      ],
-      "stats": [
-        { "value": "↑8.4%", "label": "breakfast conversion after localized premium options" },
-        { "value": "RevPAR", "label": "tracked live across every property" },
-        { "value": "24/7", "label": "guest-experience monitoring across shifts" },
-        { "value": "0", "label": "spreadsheets between the front desk and the kitchen" }
       ]
     },
     "services": {
@@ -204,20 +187,10 @@
         { "title": "Profitability by job type", "body": "Find which services are worth pushing and which you're underpricing." },
         { "title": "Team utilization", "body": "Who's delivering results, who's overloaded, and who needs another lead." },
         { "title": "Payment tracking", "body": "Get alerted on open invoices before they turn into bad debt." }
-      ],
-      "stats": [
-        { "value": "↑35%", "label": "average lead conversion improvement after full visibility" },
-        { "value": "More", "label": "jobs handled with the same team" },
-        { "value": "100%", "label": "pending payment visibility in one place" },
-        { "value": "0", "label": "manual chasing of open invoices" }
       ]
     }
   },
   "success": {
-    "eyebrow": "Success stories",
-    "titleLead": "Real businesses,",
-    "titleGradient": "real numbers.",
-    "subtitle": "How operators across retail, dining and hospitality run their day with HiBiz.",
     "stories": [
       {
         "key": "retail",

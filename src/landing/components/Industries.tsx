@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
@@ -13,9 +13,17 @@ interface Feature {
   title: string;
   body: string;
 }
-interface Stat {
+interface StoryMetric {
   value: string;
   label: string;
+}
+interface Story {
+  key: string;
+  company: string;
+  quote: string;
+  person: string;
+  role: string;
+  metrics: StoryMetric[];
 }
 
 export function Industries() {
@@ -26,7 +34,8 @@ export function Industries() {
   const title = t(`${base}.title`);
   const subtitle = t(`${base}.subtitle`);
   const features = t(`${base}.features`, { returnObjects: true }) as Feature[];
-  const stats = t(`${base}.stats`, { returnObjects: true }) as Stat[];
+  const stories = t("landing.success.stories", { returnObjects: true }) as Story[];
+  const story = stories.find((s) => s.key === active);
 
   return (
     <section id="industries" className="scroll-mt-20 py-16 sm:py-24">
@@ -114,14 +123,55 @@ export function Industries() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 self-start">
-            {stats.map((stat) => (
-              <div key={stat.label} className="surface-card rounded-xl p-4">
-                <p className="font-mono text-2xl font-semibold text-gradient-accent">{stat.value}</p>
-                <p className="mt-1.5 text-xs leading-relaxed text-zinc-500">{stat.label}</p>
+          {story && (
+            <div className="surface-card self-start rounded-2xl p-6 sm:p-7">
+              <div className="flex items-center gap-2">
+                <Quote className="h-4 w-4 -scale-x-100 text-accent-400/80 rtl:scale-x-100" />
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">
+                  {t("landing.industries.storyLabel")}
+                </span>
               </div>
-            ))}
-          </div>
+
+              <blockquote className="mt-4 font-display text-base font-medium leading-relaxed text-zinc-100 sm:text-lg">
+                “{story.quote}”
+              </blockquote>
+
+              <div className="mt-6 flex items-center gap-3.5 border-t border-zinc-800/70 pt-5">
+                <img
+                  src={`/images/person-${active}.jpg`}
+                  alt={story.person}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-11 w-11 shrink-0 rounded-full object-cover ring-1 ring-zinc-700/60"
+                />
+                <div>
+                  <p className="text-sm font-semibold text-zinc-100">{story.person}</p>
+                  <p className="text-xs text-zinc-500">
+                    {story.role} · {story.company}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-5 grid grid-cols-2 gap-3">
+                <div className="rounded-lg bg-live/[0.08] p-3.5 ring-1 ring-inset ring-live/25">
+                  <p className="font-mono text-xl font-semibold text-live">
+                    {story.metrics[0]?.value}
+                  </p>
+                  <p className="mt-1 text-[11px] leading-relaxed text-zinc-400">
+                    {story.metrics[0]?.label}
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white/[0.02] p-3.5">
+                  <p className="font-mono text-xl font-semibold text-zinc-50">
+                    {story.metrics[1]?.value}
+                  </p>
+                  <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">
+                    {story.metrics[1]?.label}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
