@@ -1,0 +1,210 @@
+{
+  "nav": {
+    "howItWorks": "How it works",
+    "capabilities": "Capabilities",
+    "industries": "Industries",
+    "getAccess": "Get access"
+  },
+  "hero": {
+    "badge": "Early Access Now Open",
+    "titleLead": "An AI agent that",
+    "titleGradient": "lives your business",
+    "titleTail": "24/7.",
+    "subtitle": "Stop manually chasing reports. HiBiz AI constantly monitors your sales, inventory, and operations — and delivers instant, clear answers right inside WhatsApp.",
+    "bookDemo": "Book a Demo",
+    "builtFor": "Built for",
+    "chips": {
+      "retail": "Retail",
+      "restaurants": "Restaurants",
+      "hospitality": "Hospitality",
+      "services": "Services"
+    },
+    "chat": {
+      "name": "HiBiz AI",
+      "status": "online",
+      "q1": "How much did I sell yesterday?",
+      "a1Pre": "Yesterday total revenue was ",
+      "a1Amount": "$8,340",
+      "a1Mid": " — ",
+      "a1Delta": "12% above",
+      "a1Post": " your 7-day average.",
+      "a2": "Downtown led (+18%). North branch was 22% below average.",
+      "time": "09:01",
+      "placeholder": "Message HiBiz AI…"
+    }
+  },
+  "marquee": [
+    "Real-time sales tracking",
+    "Inventory predictions",
+    "Branch performance",
+    "Proactive alerts",
+    "Works over WhatsApp",
+    "Universal integrations",
+    "Team & shift visibility",
+    "Lead tracking",
+    "Daily briefings",
+    "Decision support"
+  ],
+  "how": {
+    "eyebrow": "How it works",
+    "titleLead": "From data chaos to",
+    "titleGradient": "clear answers in seconds.",
+    "steps": [
+      {
+        "title": "We connect your systems",
+        "body": "HiBiz integrates with your POS, inventory, CRM, and ops tools. No code, no complexity — we handle the full setup."
+      },
+      {
+        "title": "The agent monitors 24/7",
+        "body": "Our AI constantly watches your data — tracking trends, spotting drops, and flagging what needs attention before you even ask."
+      },
+      {
+        "title": "You get answers on WhatsApp",
+        "body": "Ask anything, anytime. Or just wait — HiBiz proactively sends you alerts and daily summaries straight to your phone."
+      }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "Capabilities",
+    "titleLead": "Everything you need to",
+    "titleGradient": "run with clarity.",
+    "items": [
+      {
+        "icon": "answers",
+        "title": "Instant business answers",
+        "body": "Ask \"How much did I sell yesterday?\" or \"Which branch is underperforming?\" and get a clear, data-backed answer in seconds."
+      },
+      {
+        "icon": "alerts",
+        "title": "Proactive alerts",
+        "body": "HiBiz notifies you the moment something needs attention — unusual drops, stock running low, delayed payments — before it becomes a problem."
+      },
+      {
+        "icon": "integrations",
+        "title": "Universal integrations",
+        "body": "Connects to your POS, inventory, scheduling, and payment tools and unifies everything into one intelligent layer."
+      },
+      {
+        "icon": "briefings",
+        "title": "Daily briefings & KPIs",
+        "body": "Wake up to a morning briefing of what happened, what's trending, and where to focus today — delivered on WhatsApp."
+      },
+      {
+        "icon": "multiLocation",
+        "title": "Multi-location control",
+        "body": "Running multiple branches or teams? Compare performance across all locations and spot gaps the moment they appear."
+      },
+      {
+        "icon": "decisions",
+        "title": "Decision support",
+        "body": "Not just data — context. HiBiz explains what's behind the numbers and surfaces what action makes the most sense next."
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "Industries",
+    "titleLead": "Built for the way",
+    "titleGradient": "you actually run your business.",
+    "tabs": {
+      "retail": "Retail",
+      "restaurants": "Restaurants",
+      "hospitality": "Hospitality",
+      "services": "Service Businesses"
+    },
+    "retail": {
+      "label": "Retail",
+      "title": "Always know what's happening in your store.",
+      "subtitle": "Sales, suppliers, products and costs — all in one place, without chasing spreadsheets.",
+      "features": [
+        { "title": "Sales analysis", "body": "What sold, to whom, and for how much — by branch, period, and product." },
+        { "title": "Supplier invoice analysis", "body": "Catch pricing anomalies and overpriced suppliers before they hit your costs." },
+        { "title": "Real-time alerts that save you money", "body": "Unusual price? Stale inventory? Get notified before it adds up." },
+        { "title": "Loss-making product detection", "body": "Find which items are taking up space and losing you money." }
+      ],
+      "stats": [
+        { "value": "Hours", "label": "saved weekly on manual reporting" },
+        { "value": "Instant", "label": "detection of supplier anomalies and loss-makers" },
+        { "value": "24/7", "label": "business monitoring without staying glued to a screen" },
+        { "value": "0", "label": "new tools to learn — just WhatsApp" }
+      ]
+    },
+    "restaurants": {
+      "label": "Restaurants",
+      "title": "From the kitchen to your bottom line.",
+      "subtitle": "Keep your finger on the pulse of every branch, every shift, every menu item.",
+      "features": [
+        { "title": "Sales analysis", "body": "Which dish sells, at what hour, and what's the real margin on it." },
+        { "title": "Recipe book management", "body": "Track the actual cost of every dish based on its real ingredients." },
+        { "title": "Dynamic food cost based on live supplier prices", "body": "Supplier price changed? Dish cost updates automatically." },
+        { "title": "Real-time alerts on what actually matters", "body": "An unusual drop in a shift, a dish over budget — you'll always know." }
+      ],
+      "stats": [
+        { "value": "↓12%", "label": "average food cost reduction after recipe tracking" },
+        { "value": "Dynamic", "label": "dish cost updates based on live market prices" },
+        { "value": "0", "label": "cost surprises — full visibility into every dish" },
+        { "value": "Real-time", "label": "alerts on what's hitting your bottom line" }
+      ]
+    },
+    "hospitality": {
+      "label": "Hospitality",
+      "title": "Every guest touchpoint, in sync.",
+      "subtitle": "Occupancy, room service, F&B and guest satisfaction — unified so nothing slips between shifts or properties.",
+      "features": [
+        { "title": "Occupancy & revenue per room", "body": "See RevPAR and occupancy by property, room type, and season at a glance." },
+        { "title": "Room service & F&B margins", "body": "Track what guests order, when, and the real margin on every item." },
+        { "title": "Guest satisfaction signals", "body": "Catch a dip in reviews or service scores before it spreads across locations." },
+        { "title": "Shift & staffing visibility", "body": "Match front-desk and housekeeping cover to predicted arrivals and check-outs." }
+      ],
+      "stats": [
+        { "value": "↑8.4%", "label": "breakfast conversion after localized premium options" },
+        { "value": "RevPAR", "label": "tracked live across every property" },
+        { "value": "24/7", "label": "guest-experience monitoring across shifts" },
+        { "value": "0", "label": "spreadsheets between the front desk and the kitchen" }
+      ]
+    },
+    "services": {
+      "label": "Service Businesses",
+      "title": "More jobs, less operational chaos.",
+      "subtitle": "Know where leads are being lost, which jobs are most profitable, and where your team needs support.",
+      "features": [
+        { "title": "Lead heat map", "body": "See exactly which leads are hot, which are cold, and where your pipeline is stuck." },
+        { "title": "Profitability by job type", "body": "Find which services are worth pushing and which you're underpricing." },
+        { "title": "Team utilization", "body": "Who's delivering results, who's overloaded, and who needs another lead." },
+        { "title": "Payment tracking", "body": "Get alerted on open invoices before they turn into bad debt." }
+      ],
+      "stats": [
+        { "value": "↑35%", "label": "average lead conversion improvement after full visibility" },
+        { "value": "More", "label": "jobs handled with the same team" },
+        { "value": "100%", "label": "pending payment visibility in one place" },
+        { "value": "0", "label": "manual chasing of open invoices" }
+      ]
+    }
+  },
+  "contact": {
+    "badge": "Limited Early Access",
+    "titleLead": "Ready to stop chasing",
+    "titleGradient": "your own data?",
+    "subtitle": "Tell us about your business and we'll reach out with early access details.",
+    "name": "Your name",
+    "email": "Work email",
+    "business": "Business name",
+    "industry": "Industry",
+    "industryOptions": {
+      "retail": "Retail",
+      "restaurant": "Restaurant",
+      "service": "Service Business",
+      "other": "Other"
+    },
+    "message": "Tell us about your business",
+    "submit": "Book a Demo",
+    "successTitle": "We got your request!",
+    "successBody": "Pick a time that works for you and we'll walk you through HiBiz."
+  },
+  "footer": {
+    "tagline": "Your business, 24/7 — answered on WhatsApp.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}

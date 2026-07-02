@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Brand accent ramp — indigo/violet core of the Linear-style aurora */
+  --color-accent-50: #efeafe;
+  --color-accent-200: #d6c9ff;
+  --color-accent-300: #b9a3ff;
+  --color-accent-400: #9e86ff;
+  --color-accent-500: #7c5cff;
+  --color-accent-600: #6a48f0;
+  --color-accent-700: #5638cf;
+  --color-accent-900: #241a52;
+
+  /* Aurora stops (blue → indigo → violet) */
+  --color-aurora-blue: #5b8def;
+  --color-aurora-indigo: #7c5cff;
+  --color-aurora-violet: #a855f7;
+
+  /* Reserved for "live / positive" signals only */
+  --color-live: #2dd4bf;
+
+  --color-glow-purple: #7c5cff;
+  --color-glow-blue: #5b8def;
+
+  --animate-fade-in: fade-in 0.18s ease-out;
+  --animate-scale-in: scale-in 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-down: slide-down 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-reveal: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-chat-in: chat-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96) translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes chat-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: theme(--color-zinc-800);
+  }
+  html {
+    color-scheme: dark;
+    /* Global size knob — scales all rem-based type + spacing down for a
+       denser, more mature feel. Lower this value to shrink the whole site. */
+    font-size: 14px;
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-accent-500) 40%, transparent);
+    color: white;
+  }
+
+  /* Thin, unobtrusive scrollbars that fit the premium dark aesthetic */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: theme(--color-zinc-800);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: theme(--color-zinc-700);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme(--color-zinc-800) transparent;
+  }
+}
+
+@layer utilities {
+  .text-gradient-accent {
+    background-image: linear-gradient(
+      105deg,
+      var(--color-aurora-blue),
+      var(--color-aurora-indigo) 55%,
+      var(--color-aurora-violet)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-accent {
+    background-image: linear-gradient(
+      120deg,
+      var(--color-aurora-blue),
+      var(--color-aurora-violet)
+    );
+  }
+
+  .glow-accent {
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--color-accent-500) 22%, transparent),
+      0 10px 34px -10px color-mix(in srgb, var(--color-accent-500) 50%, transparent);
+  }
+
+  .surface-elevated {
+    background-color: color-mix(in srgb, var(--color-zinc-900) 92%, white 2%);
+  }
+
+  .glass {
+    background-color: color-mix(in srgb, var(--color-zinc-950) 62%, transparent);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+  }
+
+  /* Linear-style multi-stop aurora used behind hero / product / CTA */
+  .bg-ambient {
+    background-image:
+      radial-gradient(
+        58% 46% at 50% -8%,
+        color-mix(in srgb, var(--color-aurora-indigo) 20%, transparent),
+        transparent 70%
+      ),
+      radial-gradient(
+        40% 42% at 12% 8%,
+        color-mix(in srgb, var(--color-aurora-blue) 15%, transparent),
+        transparent 62%
+      ),
+      radial-gradient(
+        44% 46% at 88% 14%,
+        color-mix(in srgb, var(--color-aurora-violet) 16%, transparent),
+        transparent 66%
+      );
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .pause-on-hover:hover * {
+    animation-play-state: paused;
+  }
+}
