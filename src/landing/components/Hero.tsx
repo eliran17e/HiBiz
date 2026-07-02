@@ -30,6 +30,8 @@ export function Hero() {
           backgroundSize: "64px 64px",
         }}
       />
+      {/* Film grain */}
+      <div className="bg-grain pointer-events-none absolute inset-0 -z-10 opacity-[0.03]" />
       {/* Bottom fade into the page */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-b from-transparent to-zinc-950" />
 

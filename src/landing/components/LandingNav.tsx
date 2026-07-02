@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -37,9 +36,9 @@ export function LandingNav() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex shrink-0 items-center gap-2">
+        <a href="/" className="flex shrink-0 items-center gap-2">
           <img src="/logo_full.png" alt="HiBiz AI" className="h-7 object-contain" />
-        </Link>
+        </a>
 
         <nav className="mx-auto hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (

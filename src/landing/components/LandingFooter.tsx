@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export function LandingFooter() {
@@ -10,9 +9,9 @@ export function LandingFooter() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
           <div className="text-center md:text-start">
-            <Link to="/" className="inline-flex items-center">
+            <a href="/" className="inline-flex items-center">
               <img src="/logo_full.png" alt="HiBiz AI" className="h-7 object-contain" />
-            </Link>
+            </a>
             <p className="mt-3 max-w-xs text-sm text-zinc-500">{t("landing.footer.tagline")}</p>
           </div>
 

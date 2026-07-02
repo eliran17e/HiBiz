@@ -126,7 +126,7 @@ export function Industries() {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-xl bg-white/[0.02] p-4 transition-colors duration-300 hover:bg-white/[0.04]"
+                  className="surface-card rounded-xl p-4"
                 >
                   <p className="font-mono text-2xl font-semibold text-gradient-accent">{stat.value}</p>
                   <p className="mt-1.5 text-xs leading-relaxed text-zinc-500">{stat.label}</p>

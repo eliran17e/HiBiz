@@ -46,7 +46,7 @@ export function Capabilities() {
             const Icon = ICONS[item.icon] ?? MessageSquareText;
             return (
               <Reveal key={item.icon} delay={(i % 3) * 100}>
-                <div className="group relative h-full overflow-hidden rounded-xl bg-white/[0.02] p-5 transition-colors duration-300 hover:bg-white/[0.04]">
+                <div className="surface-card group relative h-full overflow-hidden rounded-xl p-5">
                   <div className="pointer-events-none absolute -top-16 -end-16 h-40 w-40 rounded-full bg-accent-500/0 blur-3xl transition-colors duration-500 group-hover:bg-accent-500/10" />
                   <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-aurora-blue/20 to-aurora-violet/20 ring-1 ring-inset ring-white/10">
                     <Icon className="h-4 w-4 text-accent-300" />

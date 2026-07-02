@@ -25,7 +25,7 @@ export function HowItWorks() {
         <div className="mt-14 grid gap-4 md:grid-cols-3">
           {steps.map((step, i) => (
             <Reveal key={i} delay={i * 120}>
-              <div className="group relative h-full rounded-xl bg-white/[0.02] p-6 transition-colors duration-300 hover:bg-white/[0.04]">
+              <div className="surface-card group relative h-full rounded-xl p-6">
                 <div className="flex items-center gap-3">
                   <span className="font-mono text-sm font-medium text-gradient-accent">
                     {String(i + 1).padStart(2, "0")}
