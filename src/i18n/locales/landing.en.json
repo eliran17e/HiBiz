@@ -45,6 +45,34 @@
     "Daily briefings",
     "Decision support"
   ],
+  "demo": {
+    "eyebrow": "Product simulation",
+    "titleLead": "Watch HiBiz work,",
+    "titleGradient": "in real time.",
+    "subtitle": "No dashboards to learn. Watch how a plain question — or a silent anomaly — becomes a clear answer on WhatsApp.",
+    "frameTag": "Live simulation",
+    "scenarios": [
+      {
+        "key": "sales",
+        "label": "Sales question",
+        "desc": "You ask in plain language. HiBiz answers with numbers, not links.",
+        "question": "How did lunch do at Marina Bistro?",
+        "answer": "Lunch closed at $2,140 — 9% above forecast. Top seller: sea bass, 42 plates."
+      },
+      {
+        "key": "alert",
+        "label": "Anomaly alert",
+        "desc": "You didn't ask. HiBiz noticed anyway — before it cost money.",
+        "answer": "Heads up: card refunds at North branch are 3× the daily norm ($340 in 2 hours). Likely a POS issue at register 2."
+      },
+      {
+        "key": "briefing",
+        "label": "Morning briefing",
+        "desc": "Your day starts with you already informed.",
+        "answer": "Good morning. Yesterday: $9,850 revenue (+6%), 312 orders. Watch today: salmon stock covers about 40 plates."
+      }
+    ]
+  },
   "how": {
     "eyebrow": "How it works",
     "titleLead": "From data chaos to",
@@ -111,8 +139,10 @@
       "hospitality": "Hospitality",
       "services": "Service Businesses"
     },
+    "exploreCta": "Explore the solution",
     "retail": {
       "label": "Retail",
+      "tagline": "Inventory, suppliers and sales — one clear picture.",
       "title": "Always know what's happening in your store.",
       "subtitle": "Sales, suppliers, products and costs — all in one place, without chasing spreadsheets.",
       "features": [
@@ -130,6 +160,7 @@
     },
     "restaurants": {
       "label": "Restaurants",
+      "tagline": "From food cost to the Friday rush — under control.",
       "title": "From the kitchen to your bottom line.",
       "subtitle": "Keep your finger on the pulse of every branch, every shift, every menu item.",
       "features": [
@@ -147,6 +178,7 @@
     },
     "hospitality": {
       "label": "Hospitality",
+      "tagline": "Every guest touchpoint, perfectly timed.",
       "title": "Every guest touchpoint, in sync.",
       "subtitle": "Occupancy, room service, F&B and guest satisfaction — unified so nothing slips between shifts or properties.",
       "features": [
@@ -164,6 +196,7 @@
     },
     "services": {
       "label": "Service Businesses",
+      "tagline": "Leads, jobs and payments that run themselves.",
       "title": "More jobs, less operational chaos.",
       "subtitle": "Know where leads are being lost, which jobs are most profitable, and where your team needs support.",
       "features": [
@@ -179,6 +212,89 @@
         { "value": "0", "label": "manual chasing of open invoices" }
       ]
     }
+  },
+  "success": {
+    "eyebrow": "Success stories",
+    "titleLead": "Real businesses,",
+    "titleGradient": "real numbers.",
+    "subtitle": "How operators across retail, dining and hospitality run their day with HiBiz.",
+    "stories": [
+      {
+        "key": "retail",
+        "company": "Northgate Retail",
+        "quote": "HiBiz caught a supplier price hike we'd been quietly absorbing for three weeks. It paid for itself in the first month.",
+        "person": "Dana Peretz",
+        "role": "Retail Operations Manager",
+        "metrics": [
+          { "value": "$11K", "label": "supplier overcharges caught in one quarter" },
+          { "value": "9 hrs", "label": "of weekly manual reporting eliminated" }
+        ]
+      },
+      {
+        "key": "restaurants",
+        "company": "Marina Bistro & Grill",
+        "quote": "I ask 'how was the shift?' from my couch and get a straight answer. My managers stopped building Monday spreadsheets entirely.",
+        "person": "Omer Azoulay",
+        "role": "Owner",
+        "metrics": [
+          { "value": "↓12%", "label": "food cost after recipe-level tracking" },
+          { "value": "60 sec", "label": "from question to a data-backed answer" }
+        ]
+      },
+      {
+        "key": "hospitality",
+        "company": "Harbor View Hotel",
+        "quote": "Breakfast conversion jumped once HiBiz showed us what guests actually order — by season, not by gut feeling.",
+        "person": "Noa Shani",
+        "role": "General Manager",
+        "metrics": [
+          { "value": "+8.4%", "label": "breakfast conversion across properties" },
+          { "value": "3", "label": "properties monitored on a single feed" }
+        ]
+      },
+      {
+        "key": "services",
+        "company": "Uptown Concierge",
+        "quote": "We stopped losing leads in the cracks. HiBiz flags every quote that's gone quiet — before the customer goes quiet for good.",
+        "person": "Avi Mizrahi",
+        "role": "Founder",
+        "metrics": [
+          { "value": "+35%", "label": "lead conversion after full pipeline visibility" },
+          { "value": "0", "label": "open invoices forgotten since switching" }
+        ]
+      }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Resources",
+    "titleLead": "Latest",
+    "titleGradient": "insights.",
+    "subtitle": "Practical operations thinking from the HiBiz team.",
+    "viewAll": "All posts",
+    "readCta": "Read the post",
+    "posts": [
+      {
+        "category": "Playbook",
+        "title": "The 15-minute morning routine that replaces your Monday report stack",
+        "excerpt": "A practical WhatsApp-first workflow for owners who run multiple locations.",
+        "date": "Jun 24, 2026",
+        "read": "6 min read"
+      },
+      {
+        "category": "Food cost",
+        "title": "Recipe-level costing: why your menu margin is lying to you",
+        "excerpt": "Live supplier prices change your dish cost weekly. Here's how to keep up automatically.",
+        "date": "Jun 12, 2026",
+        "read": "8 min read"
+      },
+      {
+        "category": "AI operations",
+        "title": "Anomaly alerts that don't cry wolf: tuning signal over noise",
+        "excerpt": "What makes an alert worth sending? Inside HiBiz's approach to proactive notifications.",
+        "date": "May 30, 2026",
+        "read": "5 min read"
+      }
+    ]
   },
   "contact": {
     "badge": "Limited Early Access",

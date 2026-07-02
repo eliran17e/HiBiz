@@ -1,25 +1,13 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  BedDouble,
-  Check,
-  ShoppingBag,
-  UtensilsCrossed,
-  Wrench,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
 
 type IndustryKey = "retail" | "restaurants" | "hospitality" | "services";
 
-const TABS: { key: IndustryKey; icon: LucideIcon }[] = [
-  { key: "retail", icon: ShoppingBag },
-  { key: "restaurants", icon: UtensilsCrossed },
-  { key: "hospitality", icon: BedDouble },
-  { key: "services", icon: Wrench },
-];
+const INDUSTRIES: IndustryKey[] = ["retail", "restaurants", "hospitality", "services"];
 
 interface Feature {
   title: string;
@@ -35,14 +23,13 @@ export function Industries() {
   const [active, setActive] = useState<IndustryKey>("retail");
 
   const base = `landing.industries.${active}`;
-  const label = t(`${base}.label`);
   const title = t(`${base}.title`);
   const subtitle = t(`${base}.subtitle`);
   const features = t(`${base}.features`, { returnObjects: true }) as Feature[];
   const stats = t(`${base}.stats`, { returnObjects: true }) as Stat[];
 
   return (
-    <section id="industries" className="scroll-mt-20 py-20 sm:py-28">
+    <section id="industries" className="scroll-mt-20 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading
@@ -52,63 +39,67 @@ export function Industries() {
           />
         </Reveal>
 
-        {/* Tabs */}
+        {/* Gateway cards — each acts as the entry point to an industry solution */}
         <Reveal delay={80}>
-          <div className="mt-12 flex flex-wrap gap-2">
-            {TABS.map((tab) => {
-              const isActive = active === tab.key;
-              const Icon = tab.icon;
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {INDUSTRIES.map((key, i) => {
+              const isActive = active === key;
               return (
                 <button
-                  key={tab.key}
+                  key={key}
                   type="button"
-                  onClick={() => setActive(tab.key)}
+                  onClick={() => setActive(key)}
+                  aria-pressed={isActive}
                   className={cn(
-                    "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200",
+                    "group relative aspect-[16/10] overflow-hidden rounded-xl text-start transition-all duration-300 sm:aspect-[3/4]",
                     isActive
-                      ? "border-transparent bg-gradient-accent text-white shadow-sm"
-                      : "border-zinc-800 bg-zinc-900/50 text-zinc-400 hover:bg-zinc-800/60 hover:text-zinc-100",
+                      ? "ring-1 ring-accent-400/70 glow-accent"
+                      : "opacity-75 hover:opacity-100",
                   )}
                 >
-                  <Icon className="h-4 w-4" strokeWidth={2} />
-                  {t(`landing.industries.tabs.${tab.key}`)}
+                  <img
+                    src={`/images/${key}.jpg`}
+                    alt={t(`landing.industries.${key}.label`)}
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 h-full w-full object-cover saturate-[0.8] motion-safe:animate-ken-burns"
+                    style={{ animationDelay: `${i * -5}s` }}
+                  />
+                  <div className="absolute inset-0 bg-zinc-950/35" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/35 to-transparent" />
+
+                  <div className="absolute inset-x-0 bottom-0 p-4">
+                    <p className="font-display text-base font-semibold text-white">
+                      {t(`landing.industries.${key}.label`)}
+                    </p>
+                    <p className="mt-1 text-xs leading-relaxed text-zinc-300">
+                      {t(`landing.industries.${key}.tagline`)}
+                    </p>
+                    <span
+                      className={cn(
+                        "mt-3 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors",
+                        isActive ? "text-accent-300" : "text-zinc-400 group-hover:text-accent-300",
+                      )}
+                    >
+                      {t("landing.industries.exploreCta")}
+                      <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
+                    </span>
+                  </div>
                 </button>
               );
             })}
           </div>
         </Reveal>
 
-        {/* Content */}
-        <div key={active} className="mt-10 grid animate-fade-in gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Left: treated industry photo with title overlaid */}
-          <div className="relative min-h-[300px] overflow-hidden rounded-2xl border border-zinc-800 lg:min-h-[400px]">
-            <img
-              src={`/images/${active}.jpg`}
-              alt={label}
-              loading="lazy"
-              decoding="async"
-              className="absolute inset-0 h-full w-full object-cover saturate-[0.85]"
-            />
-            {/* Duotone / readability overlays */}
-            <div className="absolute inset-0 bg-zinc-950/40" />
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/45 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-accent-900/60 via-transparent to-transparent mix-blend-soft-light" />
-
-            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-              <span className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.16em] text-white/90 backdrop-blur-sm">
-                {label}
-              </span>
-              <h3 className="mt-3 max-w-md font-display text-xl font-semibold tracking-tight text-white sm:text-2xl">
-                {title}
-              </h3>
-            </div>
-          </div>
-
-          {/* Right: copy, features, stats */}
+        {/* Detail panel for the selected industry */}
+        <div key={active} className="mt-10 grid animate-fade-in gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
-            <p className="max-w-lg text-sm leading-relaxed text-zinc-400">{subtitle}</p>
+            <h3 className="font-display text-xl font-semibold tracking-tight text-zinc-50 sm:text-2xl">
+              {title}
+            </h3>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-zinc-400">{subtitle}</p>
 
-            <ul className="mt-6 flex flex-col gap-4">
+            <ul className="mt-7 flex flex-col gap-4">
               {features.map((feature) => (
                 <li key={feature.title} className="flex gap-3">
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-accent-500/15 ring-1 ring-inset ring-accent-500/30">
@@ -121,18 +112,15 @@ export function Industries() {
                 </li>
               ))}
             </ul>
+          </div>
 
-            <div className="mt-7 grid grid-cols-2 gap-3">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="surface-card rounded-xl p-4"
-                >
-                  <p className="font-mono text-2xl font-semibold text-gradient-accent">{stat.value}</p>
-                  <p className="mt-1.5 text-xs leading-relaxed text-zinc-500">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-2 gap-3 self-start">
+            {stats.map((stat) => (
+              <div key={stat.label} className="surface-card rounded-xl p-4">
+                <p className="font-mono text-2xl font-semibold text-gradient-accent">{stat.value}</p>
+                <p className="mt-1.5 text-xs leading-relaxed text-zinc-500">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
