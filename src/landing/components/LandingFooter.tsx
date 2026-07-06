@@ -1,5 +1,11 @@
 import { useTranslation } from "react-i18next";
 
+const LEGAL_LINKS = [
+  { key: "privacy", href: "/privacy" },
+  { key: "terms", href: "/terms" },
+  { key: "accessibility", href: "/accessibility" },
+] as const;
+
 export function LandingFooter() {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
@@ -16,12 +22,15 @@ export function LandingFooter() {
           </div>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
-            <a href="#" className="text-zinc-400 transition-colors hover:text-zinc-100">
-              {t("landing.footer.privacy")}
-            </a>
-            <a href="#" className="text-zinc-400 transition-colors hover:text-zinc-100">
-              {t("landing.footer.terms")}
-            </a>
+            {LEGAL_LINKS.map((link) => (
+              <a
+                key={link.key}
+                href={link.href}
+                className="text-zinc-400 transition-colors hover:text-zinc-100"
+              >
+                {t(`landing.footer.${link.key}`)}
+              </a>
+            ))}
             <a
               href="mailto:eyal@hibiz.dev"
               className="text-zinc-400 transition-colors hover:text-zinc-100"

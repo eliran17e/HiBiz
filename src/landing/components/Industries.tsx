@@ -153,8 +153,8 @@ export function Industries() {
               </div>
 
               <div className="mt-5 grid grid-cols-2 gap-3">
-                <div className="rounded-lg bg-live/[0.08] p-3.5 ring-1 ring-inset ring-live/25">
-                  <p className="font-mono text-xl font-semibold text-live">
+                <div className="rounded-lg bg-white/[0.06] p-3.5 ring-1 ring-inset ring-white/15">
+                  <p className="font-mono text-xl font-semibold text-white">
                     {story.metrics[0]?.value}
                   </p>
                   <p className="mt-1 text-[11px] leading-relaxed text-zinc-400">
@@ -162,7 +162,7 @@ export function Industries() {
                   </p>
                 </div>
                 <div className="rounded-lg bg-white/[0.02] p-3.5">
-                  <p className="font-mono text-xl font-semibold text-zinc-50">
+                  <p className="font-mono text-xl font-semibold text-zinc-300">
                     {story.metrics[1]?.value}
                   </p>
                   <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">

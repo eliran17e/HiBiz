@@ -5,26 +5,24 @@
   --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
 
-  /* Brand accent ramp — indigo/violet core of the Linear-style aurora */
-  --color-accent-50: #efeafe;
-  --color-accent-200: #d6c9ff;
-  --color-accent-300: #b9a3ff;
-  --color-accent-400: #9e86ff;
-  --color-accent-500: #7c5cff;
-  --color-accent-600: #6a48f0;
-  --color-accent-700: #5638cf;
-  --color-accent-900: #241a52;
+  /* Monochrome accent ramp — client direction: strict black/white, no purple.
+     Kept under the "accent" name so every existing usage goes grayscale at once. */
+  --color-accent-50: #fafafa;
+  --color-accent-200: #e4e4e7;
+  --color-accent-300: #d4d4d8;
+  --color-accent-400: #a1a1aa;
+  --color-accent-500: #71717a;
+  --color-accent-600: #52525b;
+  --color-accent-700: #3f3f46;
+  --color-accent-900: #18181b;
 
-  /* Aurora stops (blue → indigo → violet) */
-  --color-aurora-blue: #5b8def;
-  --color-aurora-indigo: #7c5cff;
-  --color-aurora-violet: #a855f7;
+  /* Former aurora stops, now white-light stops for ambient glows */
+  --color-aurora-blue: #d4d4d8;
+  --color-aurora-indigo: #fafafa;
+  --color-aurora-violet: #a1a1aa;
 
   /* Reserved for "live / positive" signals only */
   --color-live: #2dd4bf;
-
-  --color-glow-purple: #7c5cff;
-  --color-glow-blue: #5b8def;
 
   --animate-fade-in: fade-in 0.18s ease-out;
   --animate-scale-in: scale-in 0.15s cubic-bezier(0.16, 1, 0.3, 1);
@@ -193,25 +191,20 @@
 
 @layer utilities {
   .text-gradient-accent {
-    background-image: linear-gradient(105deg,
-        var(--color-aurora-blue),
-        var(--color-aurora-indigo) 55%,
-        var(--color-aurora-violet));
+    background-image: linear-gradient(105deg, #ffffff 35%, #8f8f96);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
 
   .bg-gradient-accent {
-    background-image: linear-gradient(120deg,
-        var(--color-aurora-blue),
-        var(--color-aurora-violet));
+    background-image: linear-gradient(120deg, #ffffff, #d4d4d8);
   }
 
   .glow-accent {
     box-shadow:
-      0 0 0 1px color-mix(in srgb, var(--color-accent-500) 22%, transparent),
-      0 10px 34px -10px color-mix(in srgb, var(--color-accent-500) 50%, transparent);
+      0 0 0 1px rgb(255 255 255 / 0.12),
+      0 10px 34px -10px rgb(255 255 255 / 0.25);
   }
 
   .surface-elevated {
@@ -224,17 +217,17 @@
     -webkit-backdrop-filter: blur(16px) saturate(140%);
   }
 
-  /* Linear-style multi-stop aurora used behind hero / product / CTA */
+  /* Monochrome light wash used behind hero / demo / CTA sections */
   .bg-ambient {
     background-image:
       radial-gradient(58% 46% at 50% -8%,
-        color-mix(in srgb, var(--color-aurora-indigo) 20%, transparent),
+        rgb(255 255 255 / 0.09),
         transparent 70%),
       radial-gradient(40% 42% at 12% 8%,
-        color-mix(in srgb, var(--color-aurora-blue) 15%, transparent),
+        rgb(255 255 255 / 0.05),
         transparent 62%),
       radial-gradient(44% 46% at 88% 14%,
-        color-mix(in srgb, var(--color-aurora-violet) 16%, transparent),
+        rgb(255 255 255 / 0.06),
         transparent 66%);
   }
 
@@ -253,6 +246,36 @@
 
   .pause-on-hover:hover * {
     animation-play-state: paused;
+  }
+
+  /* --- Accessibility widget states (classes applied to <html>) --- */
+  html.a11y-large {
+    font-size: 18px !important;
+  }
+
+  html.a11y-contrast body {
+    background-color: #000;
+  }
+  html.a11y-contrast :is(.text-zinc-400, .text-zinc-500, .text-zinc-600) {
+    color: #e4e4e7 !important;
+  }
+  html.a11y-contrast :is(.border-zinc-800, .border-zinc-800\/80, .border-zinc-800\/70, .border-zinc-800\/60) {
+    border-color: #52525b !important;
+  }
+
+  html.a11y-no-motion *,
+  html.a11y-no-motion *::before,
+  html.a11y-no-motion *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  html.a11y-no-motion {
+    scroll-behavior: auto !important;
+  }
+
+  html.a11y-links a {
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
   }
 
   /* Flat glass card with a 1px inner top-light — the Linear surface look */

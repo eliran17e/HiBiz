@@ -1,50 +1,25 @@
 {
   "nav": {
-    "howItWorks": "How it works",
-    "capabilities": "Capabilities",
     "industries": "Industries",
-    "getAccess": "Get access"
+    "capabilities": "Capabilities",
+    "blog": "Blog",
+    "contact": "Contact us",
+    "skipToContent": "Skip to content"
   },
   "hero": {
-    "badge": "Early Access Now Open",
     "titleLead": "An AI agent that",
     "titleGradient": "lives your business",
     "titleTail": "24/7.",
-    "subtitle": "Stop manually chasing reports. HiBiz AI constantly monitors your sales, inventory, and operations — and delivers instant, clear answers right inside WhatsApp.",
-    "bookDemo": "Book a Demo",
+    "subtitle": "HiBiz AI monitors your sales, inventory and operations around the clock — and answers you in plain language, right inside WhatsApp.",
+    "secondaryCta": "See what it does",
     "builtFor": "Built for",
     "chips": {
       "retail": "Retail",
       "restaurants": "Restaurants",
       "hospitality": "Hospitality",
       "services": "Services"
-    },
-    "chat": {
-      "name": "HiBiz AI",
-      "status": "online",
-      "q1": "How much did I sell yesterday?",
-      "a1Pre": "Yesterday total revenue was ",
-      "a1Amount": "$8,340",
-      "a1Mid": " — ",
-      "a1Delta": "12% above",
-      "a1Post": " your 7-day average.",
-      "a2": "Downtown led (+18%). North branch was 22% below average.",
-      "time": "09:01",
-      "placeholder": "Message HiBiz AI…"
     }
   },
-  "marquee": [
-    "Real-time sales tracking",
-    "Inventory predictions",
-    "Branch performance",
-    "Proactive alerts",
-    "Works over WhatsApp",
-    "Universal integrations",
-    "Team & shift visibility",
-    "Lead tracking",
-    "Daily briefings",
-    "Decision support"
-  ],
   "demo": {
     "eyebrow": "Product simulation",
     "titleLead": "Watch HiBiz work,",
@@ -75,8 +50,6 @@
   },
   "how": {
     "eyebrow": "How it works",
-    "titleLead": "From data chaos to",
-    "titleGradient": "clear answers in seconds.",
     "steps": [
       {
         "title": "We connect your systems",
@@ -270,10 +243,9 @@
     ]
   },
   "contact": {
-    "badge": "Limited Early Access",
-    "titleLead": "Ready to stop chasing",
-    "titleGradient": "your own data?",
-    "subtitle": "Tell us about your business and we'll reach out with early access details.",
+    "titleLead": "Have questions?",
+    "titleGradient": "Let's talk.",
+    "subtitle": "Tell us about your business and we'll get back to you within one business day.",
     "name": "Your name",
     "email": "Work email",
     "business": "Business name",
@@ -285,15 +257,64 @@
       "other": "Other"
     },
     "message": "Tell us about your business",
-    "submit": "Book a Demo",
-    "successTitle": "We got your request!",
-    "successBody": "Pick a time that works for you and we'll walk you through HiBiz."
+    "submit": "Send message",
+    "successTitle": "We got your message!",
+    "successBody": "Thanks for reaching out — we'll get back to you within one business day."
   },
   "footer": {
     "tagline": "Your business, 24/7 — answered on WhatsApp.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
+    "accessibility": "Accessibility Statement",
     "contact": "Contact",
     "rights": "All rights reserved."
+  },
+  "a11y": {
+    "openLabel": "Accessibility options",
+    "title": "Accessibility",
+    "largeText": "Larger text",
+    "contrast": "High contrast",
+    "noMotion": "Stop animations",
+    "links": "Highlight links",
+    "reset": "Reset settings",
+    "statement": "Accessibility statement"
+  },
+  "legal": {
+    "backHome": "Back to home",
+    "updated": "Last updated: July 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "sections": [
+        { "h": "Who we are", "p": "HiBiz AI (\"HiBiz\", \"we\") provides an AI-based business monitoring service that delivers insights and alerts over WhatsApp. This policy explains what information we collect through this website and how we use it." },
+        { "h": "Information we collect", "p": "When you submit our contact form we collect the details you provide: your name, work email, business name, industry, and any message you include. We do not collect payment details through this website." },
+        { "h": "How we use your information", "p": "We use your contact details solely to respond to your inquiry, schedule demos, and share relevant information about the HiBiz service. We do not sell or rent your personal information to third parties." },
+        { "h": "Cookies and local storage", "p": "This website uses browser local storage to remember your language preference and accessibility settings. We do not use advertising or tracking cookies." },
+        { "h": "Service providers", "p": "The website is hosted on Vercel. Form submissions may be processed by our email and CRM providers strictly for the purposes described above." },
+        { "h": "Data retention and your rights", "p": "We keep inquiry details only as long as needed to handle your request. You may ask us to access, correct, or delete your personal information at any time by emailing eyal@hibiz.dev." },
+        { "h": "Contact", "p": "For any privacy question or request, contact us at eyal@hibiz.dev." }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "sections": [
+        { "h": "Acceptance of terms", "p": "By accessing this website you agree to these Terms of Service. If you do not agree, please do not use the site." },
+        { "h": "The service", "p": "HiBiz AI provides business monitoring, analytics and alerting delivered through messaging platforms. Content on this website is provided for general information and does not constitute business or financial advice." },
+        { "h": "Use of the website", "p": "You agree to use the website lawfully and not to attempt to disrupt, probe, or gain unauthorized access to it or to any related systems." },
+        { "h": "Intellectual property", "p": "All content on this website — text, design, graphics and logos — belongs to HiBiz AI or its licensors and may not be reproduced without written permission." },
+        { "h": "Disclaimer and liability", "p": "The website is provided \"as is\" without warranties of any kind. To the maximum extent permitted by law, HiBiz AI shall not be liable for indirect or consequential damages arising from use of the website." },
+        { "h": "Governing law", "p": "These terms are governed by the laws of the State of Israel, and the competent courts in Israel shall have exclusive jurisdiction." },
+        { "h": "Contact", "p": "Questions about these terms? Contact us at eyal@hibiz.dev." }
+      ]
+    },
+    "accessibility": {
+      "title": "Accessibility Statement",
+      "sections": [
+        { "h": "Our commitment", "p": "HiBiz AI is committed to making its website accessible to people with disabilities, in accordance with the Israeli Equal Rights for Persons with Disabilities regulations (IS 5568) and WCAG 2.1 Level AA guidelines." },
+        { "h": "What we've implemented", "p": "The site supports full keyboard navigation with visible focus indicators, proper heading structure and ARIA labels, alternative text for images, right-to-left and Hebrew language support, and respects the system's reduced-motion preference." },
+        { "h": "Accessibility menu", "p": "An accessibility menu is available on every page (the accessibility button at the corner of the screen). It allows enlarging text, increasing contrast, stopping animations, and highlighting links. Preferences are saved for your next visit." },
+        { "h": "Known limitations", "p": "Some third-party photographs are decorative. If you encounter any content that is difficult to access, we would appreciate your feedback and will address it promptly." },
+        { "h": "Contact the accessibility coordinator", "p": "Found an accessibility issue, or need assistance? Email us at eyal@hibiz.dev and we will respond as quickly as possible." }
+      ]
+    }
   }
 }

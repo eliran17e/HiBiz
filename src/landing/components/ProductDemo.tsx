@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
-import { SectionHeading } from "./SectionHeading";
-import { Reveal } from "./Reveal";
 
 interface DemoScenario {
   key: string;
@@ -24,7 +22,8 @@ function usePrefersReducedMotion() {
   );
 }
 
-export function ProductDemo() {
+/** The framed WhatsApp simulation, embeddable inside any section. */
+export function DemoFrame() {
   const { t } = useTranslation();
   const scenarios = t("landing.demo.scenarios", { returnObjects: true }) as DemoScenario[];
   const reducedMotion = usePrefersReducedMotion();
@@ -51,24 +50,8 @@ export function ProductDemo() {
   }, [active, scenarios.length]);
 
   return (
-    <section id="product" className="relative scroll-mt-20 overflow-hidden py-16 sm:py-24">
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] bg-ambient opacity-60" />
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="max-w-2xl">
-          <SectionHeading
-            eyebrow={t("landing.demo.eyebrow")}
-            lead={t("landing.demo.titleLead")}
-            gradient={t("landing.demo.titleGradient")}
-          />
-          <p className="mt-4 text-base leading-relaxed text-zinc-400">
-            {t("landing.demo.subtitle")}
-          </p>
-        </Reveal>
-
-        <Reveal delay={120}>
-          <div className="relative mt-12">
-            <div className="pointer-events-none absolute -inset-x-8 -top-8 bottom-0 -z-10 rounded-[2rem] bg-[radial-gradient(55%_60%_at_50%_0%,color-mix(in_srgb,var(--color-aurora-indigo)_20%,transparent),transparent_70%)] blur-2xl" />
+    <div className="relative">
+      <div className="pointer-events-none absolute -inset-x-8 -top-8 bottom-0 -z-10 rounded-[2rem] bg-[radial-gradient(55%_60%_at_50%_0%,rgb(255_255_255/0.08),transparent_70%)] blur-2xl" />
 
             <div className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/70 shadow-[0_40px_120px_-40px_rgba(0,0,0,0.9)] backdrop-blur-xl">
               {/* Window chrome */}
@@ -79,7 +62,7 @@ export function ProductDemo() {
                   <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
                 </div>
                 <span className="ms-auto flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-zinc-500">
-                  <span className="h-1.5 w-1.5 rounded-full bg-live motion-safe:animate-pulse" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-zinc-300 motion-safe:animate-pulse" />
                   {t("landing.demo.frameTag")}
                 </span>
               </div>
@@ -119,7 +102,7 @@ export function ProductDemo() {
                 {/* Chat replay */}
                 <div className="flex min-h-[300px] flex-col bg-zinc-950/40 sm:min-h-[340px]">
                   <div className="flex items-center gap-2.5 border-b border-zinc-800/60 px-5 py-3">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-accent">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-zinc-800 ring-1 ring-inset ring-white/10">
                       <img src="/logo_mark.png" alt="" className="h-4 w-4 object-contain" />
                     </div>
                     <span className="text-sm font-semibold text-zinc-100">HiBiz AI</span>
@@ -131,7 +114,7 @@ export function ProductDemo() {
                   <div key={active} className="flex flex-1 flex-col justify-center gap-3 px-5 py-6">
                     {scenario.question && (
                       <div className="flex justify-end motion-safe:animate-chat-in">
-                        <div className="max-w-[85%] rounded-2xl rounded-ee-md bg-gradient-accent px-4 py-2.5 text-sm text-white">
+                        <div className="max-w-[85%] rounded-2xl rounded-ee-md bg-gradient-accent px-4 py-2.5 text-sm text-zinc-950">
                           {scenario.question}
                         </div>
                       </div>
@@ -173,9 +156,6 @@ export function ProductDemo() {
                 </div>
               </div>
             </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
+    </div>
   );
 }

@@ -5,10 +5,9 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const NAV_LINKS = [
-  { key: "howItWorks", href: "#how" },
-  { key: "capabilities", href: "#capabilities" },
   { key: "industries", href: "#industries" },
-  { key: "getAccess", href: "#contact" },
+  { key: "capabilities", href: "#capabilities" },
+  { key: "blog", href: "#blog" },
 ] as const;
 
 export function LandingNav() {
@@ -35,6 +34,12 @@ export function LandingNav() {
           : "border-b border-transparent bg-transparent",
       )}
     >
+      <a
+        href="#main"
+        className="sr-only z-[60] rounded-lg bg-white px-4 py-2 text-sm font-semibold text-zinc-950 focus:not-sr-only focus:fixed focus:start-4 focus:top-4"
+      >
+        {t("landing.nav.skipToContent")}
+      </a>
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
         <a href="/" className="flex shrink-0 items-center gap-2">
           <img src="/logo_full.png" alt="HiBiz AI" className="h-7 object-contain" />
@@ -62,9 +67,9 @@ export function LandingNav() {
           </button>
           <a
             href="#contact"
-            className="hidden rounded-full bg-gradient-accent px-4 py-1.5 text-sm font-semibold text-white shadow-sm transition-all hover:brightness-110 sm:inline-flex"
+            className="hidden rounded-full bg-gradient-accent px-4 py-1.5 text-sm font-semibold text-zinc-950 shadow-sm transition-all hover:brightness-90 sm:inline-flex"
           >
-            {t("landing.hero.bookDemo")}
+            {t("landing.nav.contact")}
           </a>
           <button
             type="button"
@@ -93,9 +98,9 @@ export function LandingNav() {
             <a
               href="#contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-1 rounded-lg bg-gradient-accent px-3 py-2.5 text-center text-sm font-semibold text-white"
+              className="mt-1 rounded-lg bg-gradient-accent px-3 py-2.5 text-center text-sm font-semibold text-zinc-950"
             >
-              {t("landing.hero.bookDemo")}
+              {t("landing.nav.contact")}
             </a>
           </nav>
         </div>

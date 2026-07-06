@@ -23,10 +23,7 @@ export function ContactCTA() {
             <div className="pointer-events-none absolute -top-24 start-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-accent-500/10 blur-3xl" />
 
             <div className="relative text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-accent-500/30 bg-accent-500/10 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.16em] text-accent-200">
-                {t("landing.contact.badge")}
-              </span>
-              <h2 className="mx-auto mt-5 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-4xl">
+              <h2 className="mx-auto max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-4xl">
                 {t("landing.contact.titleLead")}{" "}
                 <span className="text-gradient-accent">{t("landing.contact.titleGradient")}</span>
               </h2>
@@ -50,12 +47,14 @@ export function ContactCTA() {
                     required
                     type="text"
                     placeholder={t("landing.contact.name")}
+                    aria-label={t("landing.contact.name")}
                     className="h-11 w-full rounded-xl border border-zinc-800 bg-zinc-950/60 px-4 text-sm text-zinc-100 placeholder:text-zinc-500 focus:border-accent-500/50 focus:outline-none focus:ring-2 focus:ring-accent-500/30"
                   />
                   <input
                     required
                     type="email"
                     placeholder={t("landing.contact.email")}
+                    aria-label={t("landing.contact.email")}
                     className="h-11 w-full rounded-xl border border-zinc-800 bg-zinc-950/60 px-4 text-sm text-zinc-100 placeholder:text-zinc-500 focus:border-accent-500/50 focus:outline-none focus:ring-2 focus:ring-accent-500/30"
                   />
                 </div>
@@ -63,6 +62,7 @@ export function ContactCTA() {
                   required
                   type="text"
                   placeholder={t("landing.contact.business")}
+                  aria-label={t("landing.contact.business")}
                   className="mt-3 h-11 w-full rounded-xl border border-zinc-800 bg-zinc-950/60 px-4 text-sm text-zinc-100 placeholder:text-zinc-500 focus:border-accent-500/50 focus:outline-none focus:ring-2 focus:ring-accent-500/30"
                 />
 
@@ -79,7 +79,7 @@ export function ContactCTA() {
                         className={
                           "rounded-full border px-3.5 py-1.5 text-sm transition-colors " +
                           (industry === opt
-                            ? "border-transparent bg-gradient-accent font-medium text-white"
+                            ? "border-transparent bg-gradient-accent font-medium text-zinc-950"
                             : "border-zinc-800 bg-zinc-900/60 text-zinc-300 hover:bg-zinc-800/60")
                         }
                       >
@@ -92,12 +92,13 @@ export function ContactCTA() {
                 <textarea
                   rows={3}
                   placeholder={t("landing.contact.message")}
+                  aria-label={t("landing.contact.message")}
                   className="mt-4 w-full resize-none rounded-xl border border-zinc-800 bg-zinc-950/60 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-500 focus:border-accent-500/50 focus:outline-none focus:ring-2 focus:ring-accent-500/30"
                 />
 
                 <button
                   type="submit"
-                  className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-accent px-6 py-3.5 text-sm font-semibold text-white shadow-lg glow-accent transition-all hover:brightness-110"
+                  className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-accent px-6 py-3.5 text-sm font-semibold text-zinc-950 shadow-lg glow-accent transition-all hover:brightness-90"
                 >
                   {t("landing.contact.submit")}
                   <ArrowRight className="h-4 w-4 rtl:rotate-180" />
