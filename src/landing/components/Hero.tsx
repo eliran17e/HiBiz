@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
@@ -32,19 +33,19 @@ export function Hero() {
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-accent px-7 py-3 text-sm font-semibold text-zinc-950 shadow-lg glow-accent transition-all hover:brightness-90"
           >
             {t("landing.nav.contact")}
-          </a>
-          <a
-            href="#capabilities"
+          </Link>
+          <Link
+            to="/#capabilities"
             className="inline-flex items-center gap-2 rounded-full border border-zinc-600/70 bg-zinc-950/40 px-7 py-3 text-sm font-semibold text-zinc-100 backdrop-blur-sm transition-colors hover:bg-zinc-800/60"
           >
             {t("landing.hero.secondaryCta")}
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

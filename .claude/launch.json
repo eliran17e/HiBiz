@@ -3,9 +3,17 @@
   "configurations": [
     {
       "name": "dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 5173
+      "runtimeExecutable": "wsl",
+      "runtimeArgs": [
+        "-d",
+        "ubuntu",
+        "--",
+        "bash",
+        "-lc",
+        "export PATH=\"$HOME/.local/node/bin:$PATH\" && cd /home/eliran17/projects/HiBiz && npx vite --host 0.0.0.0 --port ${PORT:-5180}"
+      ],
+      "port": 5180,
+      "autoPort": true
     }
   ]
 }

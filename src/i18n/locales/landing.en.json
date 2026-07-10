@@ -1,6 +1,6 @@
 {
   "nav": {
-    "industries": "Industries",
+    "platform": "Platform",
     "capabilities": "Capabilities",
     "blog": "Blog",
     "contact": "Contact us",
@@ -107,6 +107,10 @@
     },
     "exploreCta": "Explore the solution",
     "storyLabel": "Success story",
+    "useCasesLabel": "Use cases",
+    "pageCtaTitle": "See what HiBiz can do for",
+    "pageCtaGradient": "your business.",
+    "pageCtaSubtitle": "Tell us how you run things today — we'll show you what it looks like with an AI agent watching the numbers.",
     "retail": {
       "label": "Retail",
       "tagline": "Inventory, suppliers and sales — one clear picture.",
@@ -211,29 +215,9 @@
     "subtitle": "Practical operations thinking from the HiBiz team.",
     "viewAll": "All posts",
     "readCta": "Read the post",
-    "posts": [
-      {
-        "category": "Playbook",
-        "title": "The 15-minute morning routine that replaces your Monday report stack",
-        "excerpt": "A practical WhatsApp-first workflow for owners who run multiple locations.",
-        "date": "Jun 24, 2026",
-        "read": "6 min read"
-      },
-      {
-        "category": "Food cost",
-        "title": "Recipe-level costing: why your menu margin is lying to you",
-        "excerpt": "Live supplier prices change your dish cost weekly. Here's how to keep up automatically.",
-        "date": "Jun 12, 2026",
-        "read": "8 min read"
-      },
-      {
-        "category": "AI operations",
-        "title": "Anomaly alerts that don't cry wolf: tuning signal over noise",
-        "excerpt": "What makes an alert worth sending? Inside HiBiz's approach to proactive notifications.",
-        "date": "May 30, 2026",
-        "read": "5 min read"
-      }
-    ]
+    "backToBlog": "Back to blog",
+    "indexTitleLead": "All",
+    "indexTitleGradient": "posts."
   },
   "contact": {
     "titleLead": "Have questions?",
@@ -252,7 +236,17 @@
     "message": "Tell us about your business",
     "submit": "Send message",
     "successTitle": "We got your message!",
-    "successBody": "Thanks for reaching out — we'll get back to you within one business day."
+    "successBody": "Thanks for reaching out — we'll get back to you within one business day.",
+    "page": {
+      "eyebrow": "Contact",
+      "emailLabel": "Prefer email?",
+      "expectTitle": "What happens next",
+      "expectSteps": [
+        "We reply within one business day.",
+        "A short call to understand how you run your business today.",
+        "A walkthrough of HiBiz working on data like yours — on WhatsApp."
+      ]
+    }
   },
   "footer": {
     "tagline": "Your business, 24/7 — answered on WhatsApp.",
@@ -303,7 +297,7 @@
       "title": "Accessibility Statement",
       "sections": [
         { "h": "Our commitment", "p": "HiBiz AI is committed to making its website accessible to people with disabilities, in accordance with the Israeli Equal Rights for Persons with Disabilities regulations (IS 5568) and WCAG 2.1 Level AA guidelines." },
-        { "h": "What we've implemented", "p": "The site supports full keyboard navigation with visible focus indicators, proper heading structure and ARIA labels, alternative text for images, right-to-left and Hebrew language support, and respects the system's reduced-motion preference." },
+        { "h": "What we've implemented", "p": "The site supports full keyboard navigation with visible focus indicators, proper heading structure and ARIA labels, alternative text for images, and respects the system's reduced-motion preference." },
         { "h": "Accessibility menu", "p": "An accessibility menu is available on every page (the accessibility button at the corner of the screen). It allows enlarging text, increasing contrast, stopping animations, and highlighting links. Preferences are saved for your next visit." },
         { "h": "Known limitations", "p": "Some third-party photographs are decorative. If you encounter any content that is difficult to access, we would appreciate your feedback and will address it promptly." },
         { "h": "Contact the accessibility coordinator", "p": "Found an accessibility issue, or need assistance? Email us at eyal@hibiz.dev and we will respond as quickly as possible." }

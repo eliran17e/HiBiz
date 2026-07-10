@@ -39,7 +39,7 @@ export function Capabilities() {
   const steps = t("landing.how.steps", { returnObjects: true }) as Step[];
 
   return (
-    <section id="capabilities" className="relative scroll-mt-20 overflow-hidden py-16 sm:py-24">
+    <section id="capabilities" className="relative overflow-hidden py-16 sm:py-24">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] bg-ambient opacity-60" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

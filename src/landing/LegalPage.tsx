@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { LandingFooter } from "./components/LandingFooter";
 
@@ -17,17 +18,17 @@ export default function LegalPage({ kind }: { kind: LegalKind }) {
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       <header className="glass fixed inset-x-0 top-0 z-50 border-b border-zinc-800/80">
         <div className="mx-auto flex h-16 max-w-3xl items-center justify-between px-4 sm:px-6">
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src="/logo_full.png" alt="HiBiz AI" className="h-7 object-contain" />
-          </a>
+          </Link>
           <div className="flex items-center gap-2">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="inline-flex items-center gap-1.5 rounded-full border border-zinc-800 bg-zinc-900/50 px-3.5 py-1.5 text-sm text-zinc-300 transition-colors hover:bg-zinc-800/60 hover:text-zinc-100"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
               {t("landing.legal.backHome")}
-            </a>
+            </Link>
           </div>
         </div>
       </header>

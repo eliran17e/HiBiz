@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const LEGAL_LINKS = [
-  { key: "privacy", href: "/privacy" },
-  { key: "terms", href: "/terms" },
-  { key: "accessibility", href: "/accessibility" },
+  { key: "privacy", to: "/privacy" },
+  { key: "terms", to: "/terms" },
+  { key: "accessibility", to: "/accessibility" },
 ] as const;
 
 export function LandingFooter() {
@@ -15,28 +16,25 @@ export function LandingFooter() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
           <div className="text-center md:text-start">
-            <a href="/" className="inline-flex items-center">
+            <Link to="/" className="inline-flex items-center">
               <img src="/logo_full.png" alt="HiBiz AI" className="h-7 object-contain" />
-            </a>
+            </Link>
             <p className="mt-3 max-w-xs text-sm text-zinc-500">{t("landing.footer.tagline")}</p>
           </div>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
             {LEGAL_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.key}
-                href={link.href}
+                to={link.to}
                 className="text-zinc-400 transition-colors hover:text-zinc-100"
               >
                 {t(`landing.footer.${link.key}`)}
-              </a>
+              </Link>
             ))}
-            <a
-              href="mailto:eyal@hibiz.dev"
-              className="text-zinc-400 transition-colors hover:text-zinc-100"
-            >
+            <Link to="/contact" className="text-zinc-400 transition-colors hover:text-zinc-100">
               {t("landing.footer.contact")}
-            </a>
+            </Link>
           </nav>
         </div>
 
