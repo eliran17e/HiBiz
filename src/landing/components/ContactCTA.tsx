@@ -101,7 +101,7 @@ export function ContactCTA() {
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-accent px-6 py-3.5 text-sm font-semibold text-zinc-950 shadow-lg glow-accent transition-all hover:brightness-90"
                 >
                   {t("landing.contact.submit")}
-                  <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+                  <ArrowRight className="h-4 w-4" />
                 </button>
               </form>
             )}

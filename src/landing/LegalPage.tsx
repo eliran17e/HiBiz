@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
-import { useLanguage } from "@/hooks/useLanguage";
 import { LandingFooter } from "./components/LandingFooter";
 
 export type LegalKind = "privacy" | "terms" | "accessibility";
@@ -12,7 +11,6 @@ interface LegalSection {
 
 export default function LegalPage({ kind }: { kind: LegalKind }) {
   const { t } = useTranslation();
-  const { language, setLanguage } = useLanguage();
   const sections = t(`landing.legal.${kind}.sections`, { returnObjects: true }) as LegalSection[];
 
   return (
@@ -23,18 +21,11 @@ export default function LegalPage({ kind }: { kind: LegalKind }) {
             <img src="/logo_full.png" alt="HiBiz AI" className="h-7 object-contain" />
           </a>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setLanguage(language === "en" ? "he" : "en")}
-              className="rounded-full border border-zinc-800 bg-zinc-900/50 px-3 py-1.5 font-mono text-xs font-medium text-zinc-400 transition-colors hover:bg-zinc-800/60 hover:text-zinc-100"
-            >
-              {language === "en" ? "עברית" : "EN"}
-            </button>
             <a
               href="/"
               className="inline-flex items-center gap-1.5 rounded-full border border-zinc-800 bg-zinc-900/50 px-3.5 py-1.5 text-sm text-zinc-300 transition-colors hover:bg-zinc-800/60 hover:text-zinc-100"
             >
-              <ArrowLeft className="h-3.5 w-3.5 rtl:rotate-180" />
+              <ArrowLeft className="h-3.5 w-3.5" />
               {t("landing.legal.backHome")}
             </a>
           </div>

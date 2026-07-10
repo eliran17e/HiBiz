@@ -91,7 +91,7 @@ export function Industries() {
                       )}
                     >
                       {t("landing.industries.exploreCta")}
-                      <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
+                      <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </div>
                 </button>
@@ -126,7 +126,7 @@ export function Industries() {
           {story && (
             <div className="surface-card self-start rounded-2xl p-6 sm:p-7">
               <div className="flex items-center gap-2">
-                <Quote className="h-4 w-4 -scale-x-100 text-accent-400/80 rtl:scale-x-100" />
+                <Quote className="h-4 w-4 -scale-x-100 text-accent-400/80" />
                 <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-zinc-500">
                   {t("landing.industries.storyLabel")}
                 </span>

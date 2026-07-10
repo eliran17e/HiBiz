@@ -43,7 +43,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-zinc-600/70 bg-zinc-950/40 px-7 py-3 text-sm font-semibold text-zinc-100 backdrop-blur-sm transition-colors hover:bg-zinc-800/60"
           >
             {t("landing.hero.secondaryCta")}
-            <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+            <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </div>

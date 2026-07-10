@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLanguage } from "@/hooks/useLanguage";
 
 const NAV_LINKS = [
   { key: "industries", href: "#industries" },
@@ -12,7 +11,6 @@ const NAV_LINKS = [
 
 export function LandingNav() {
   const { t } = useTranslation();
-  const { language, setLanguage } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -22,8 +20,6 @@ export function LandingNav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const toggleLanguage = () => setLanguage(language === "en" ? "he" : "en");
 
   return (
     <header
@@ -60,10 +56,9 @@ export function LandingNav() {
         <div className="ms-auto flex items-center gap-2 md:ms-0">
           <button
             type="button"
-            onClick={toggleLanguage}
-            className="rounded-full border border-zinc-800 bg-zinc-900/50 px-3 py-1.5 font-mono text-xs font-medium text-zinc-400 transition-colors hover:bg-zinc-800/60 hover:text-zinc-100"
+            className="rounded-full border border-zinc-800 bg-zinc-900/50 px-4 py-1.5 text-sm font-medium text-zinc-400 transition-colors hover:bg-zinc-800/60 hover:text-zinc-100"
           >
-            {language === "en" ? "עברית" : "EN"}
+            {t("landing.nav.login")}
           </button>
           <a
             href="#contact"

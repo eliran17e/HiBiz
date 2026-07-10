@@ -37,7 +37,7 @@ export function Blog() {
             </div>
             <span className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.14em] text-zinc-500">
               {t("landing.blog.viewAll")}
-              <ArrowRight className="h-3 w-3 rtl:rotate-180" />
+              <ArrowRight className="h-3 w-3" />
             </span>
           </div>
         </Reveal>
@@ -69,7 +69,7 @@ export function Blog() {
                     <span>{post.read}</span>
                     <span className="ms-auto inline-flex items-center gap-1 text-accent-300 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                       {t("landing.blog.readCta")}
-                      <ArrowRight className="h-3 w-3 rtl:rotate-180" />
+                      <ArrowRight className="h-3 w-3" />
                     </span>
                   </div>
                 </div>
