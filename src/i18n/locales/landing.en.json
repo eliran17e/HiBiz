@@ -7,18 +7,10 @@
     "skipToContent": "Skip to content"
   },
   "hero": {
-    "titleLead": "An AI agent that",
-    "titleGradient": "lives your business",
-    "titleTail": "24/7.",
-    "subtitle": "HiBiz AI monitors your sales, inventory and operations around the clock — and answers you in plain language, right inside WhatsApp.",
-    "secondaryCta": "See what it does",
-    "builtFor": "Built for",
-    "chips": {
-      "retail": "Retail",
-      "restaurants": "Restaurants",
-      "hospitality": "Hospitality",
-      "services": "Services"
-    }
+    "titleLead": "The Fastest Way to",
+    "titleGradient": "Understand Your Business.",
+    "subtitle": "HiBiz AI helps businesses turn data into decisions through natural language — powered by AI. Ask questions, uncover insights, monitor what matters, and empower everyone to make smarter decisions.",
+    "secondaryCta": "Learn more"
   },
   "demo": {
     "eyebrow": "Product simulation",
