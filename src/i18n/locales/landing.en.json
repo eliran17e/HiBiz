@@ -1,7 +1,7 @@
 {
   "nav": {
-    "platform": "Platform",
-    "capabilities": "Capabilities",
+    "platform": "Industries",
+    "capabilities": "Platform",
     "blog": "Blog",
     "contact": "Contact us",
     "login": "Login",
@@ -59,7 +59,7 @@
     ]
   },
   "capabilities": {
-    "eyebrow": "Capabilities",
+    "eyebrow": "Platform",
     "titleLead": "Everything you need to",
     "titleGradient": "run with clarity.",
     "items": [
